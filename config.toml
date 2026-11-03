@@ -25,11 +25,14 @@ login_shell = "fish"
 
 # Stack
 node = "latest"
+pnpm = "latest"
 
 # Tools
 gh = "latest"
 fnox = "latest"
 neovim = "latest"
+worktrunk = "latest"
+zoxide = "latest"
 
 
 # # Dotfiles #####################################################################
@@ -42,3 +45,9 @@ exclude = ["*.tera"]
 [dotfiles."~/**/*"]
 source = "dotfiles/**/*.tera"
 mode = "template"
+
+[dotfiles."~/.config/git/hooks/*"]
+permissions = "0755"
+
+[dotfiles."~/.local/bin/*"]
+permissions = "0755"
