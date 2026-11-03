@@ -1,0 +1,29 @@
+[user]
+	email = "koss@nocorp.me"
+	name = "Sasha Koss"
+	signingkey = {{ env.HOME }}/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/PublicKeys/64fffeb6a07009ab1b56fe3a7096bfd8.pub
+
+[init]
+  defaultBranch = "main"
+
+[commit]
+    gpgsign = true
+
+[push]
+  autoSetupRemote = true
+
+[checkout]
+  defaultRemote = origin
+
+[core]
+  editor = nvim
+  hooksPath = ~/.config/git/hooks
+
+[advice]
+  skippedCherryPicks = true
+
+[gpg]
+    format = ssh
+
+[gpg "ssh"]
+    allowedSignersFile = ./allowed_signers

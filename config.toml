@@ -1,0 +1,44 @@
+# Settings #####################################################################
+
+[settings]
+# ...
+
+
+# Bootstrap ####################################################################
+
+# Packages =====================================================================
+
+[bootstrap.packages]
+"brew:fish" = "latest"
+"brew:starship" = "latest"
+"brew:tree" = "latest"
+
+# User =========================================================================
+
+[bootstrap.user]
+login_shell = "fish"
+
+
+# Tools ########################################################################
+
+[tools]
+
+# Stack
+node = "latest"
+
+# Tools
+gh = "latest"
+fnox = "latest"
+neovim = "latest"
+
+
+# # Dotfiles #####################################################################
+
+[dotfiles."~"]
+source = "dotfiles"
+mode = "symlink-each"
+exclude = ["*.tera"]
+
+[dotfiles."~/**/*"]
+source = "dotfiles/**/*.tera"
+mode = "template"
