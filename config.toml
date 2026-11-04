@@ -1,7 +1,7 @@
 # Settings #####################################################################
 
 [settings]
-# ...
+lockfile = true
 
 
 # Bootstrap ####################################################################
@@ -29,7 +29,7 @@ pnpm = "latest"
 
 # Tools
 gh = "latest"
-fnox = "latest"
+fnox = { version = "1.47.0", workflow = "release.yml" }
 neovim = "latest"
 worktrunk = "latest"
 zoxide = "latest"

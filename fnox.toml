@@ -1,0 +1,42 @@
+# Providers ####################################################################
+
+default_provider = "age"
+
+# FIDO =========================================================================
+
+[providers.yk-bio-fido]
+type = "fido2"
+credential_id = "5071bb7ae510e8c37c159af8e3b17b442243208d6a7b6c530b6069d8780fc3e552a2af3b1ffa5227bb108c98e1364bc5d6dfdd1d5d8c60402ad9bb54011c1255"
+salt = "fd0c78d7a21281ef7c906365da20ef91b4b7784721d4b2d2330219a01312f08a"
+rp_id = "fnox.yk-bio-fido"
+
+[providers.yk-nfc-cf-fido]
+type = "fido2"
+credential_id = "f4d0455438b304355379c66f8e8aae15b93bcf1531d639bb67660c0a5619390800e12d041f06a6a695c47898b4b566862f6b7bcc62da1d3ed13bb58260eeb3aa"
+salt = "b763d19bbf78fa6448437a6fa380de1847d546c67e81c4446e7ff94f9d4428c8"
+rp_id = "fnox.yk-nfc-cf-fido"
+
+# Age ==========================================================================
+
+[providers.age]
+type = "age"
+recipients = [
+    "age17l8alkzz73hcq09y44v70n4mfu9lxkyavjureqmlkgxng4twsdrsfz5nw9",
+    "age1cw754nrppzfxzh9ptgwtk0f5yxfl9d3ajyghy00je9rrah2qd4kspq690e",
+]
+default_identity = "yk-nfc-cf-fido"
+
+# Age identities ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[providers.age.identities.yk-bio-fido]
+provider = "yk-bio-fido"
+value = "OO/9ynIRp4CQ/furS14J80uhLFiS/7aKUeVgKdlOiFaa6KlAg/PE17J0zkUJSXGLmdL824i07wWeZPlh+XdMmyHYzQMneid9bdAxlbSg7kPw2Ul0TLy8EhB0zWDkAqGzAPHNjo2GPA206+a9AQfH5Ye5tv9hrQ+Z/THP0nozejdAgBZO28h+xhephEkVGIkatueDjiB97B4n5lPCIw6FIl/IEaHf2+ddWJPmmJmnUFnaEI51NA7rpOMwccXITvofl6rpQbS7fZVWOMku1mrG+jFHdCmBKPwhfQ=="
+
+[providers.age.identities.yk-nfc-cf-fido]
+provider = "yk-nfc-cf-fido"
+value = "TfFxrCWN1TJBaNEiYeK0ksaZZujWuA+j6Rst9BRGxaq7uSbZGJ2jTdt+JbVPNwTlexL03tGc/g099wQg8vrM1h38Qs9opgMz905e780K+qT8d1lE7oG8xfC7BOhv0+c1LmsveXObefBCP9FDrLiFyC6dgN/0C4GjykhWXD4EmKV4Qkl0aiZSVvu1P9mr5ujCrFj8XbfY+/nXkxo3u3g5U4Cb9IoLFeYfSmEN/iXsq4Ah1pX3Q4P7gw4THjvl030kSQatfeOB5oaFeCpOYGweAstCvYdWADD9UQ=="
+
+# Secrets ######################################################################
+
+[secrets]
+TEST= { provider = "age", value = "YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSAxY3lSZWtXZnhEQUQ3NU0wWjZ5bTlCYjFSY3RMK2RwOGU1eDdsRzdSRUZ3CktoUlJmWXE2RlZCbStYeWV4M1JOMDNVMzhtSG4xb1dHclpta1NWanBDSVUKLT4gWDI1NTE5IFg4RXBxTlhRL2k3L1AzMnUyZzVOMGdZT0UraEkwZ0ZsU3drUTNXcjBWbjgKRzhFREM3cEhnKzN3NVlnSksyUUcwVGt1S256UWRxbGl1K3M1MEhVaUczcwotPiBwaXYtcDI1NiBxNVlXaUEgQWh6ZHgvTVFZQmw2UlFCVDdzTDNmdTNzZXhZSGNYTVBsd3dTZEdKSU9aWEEKck9CNVhwS3lkTlVSa2xMcm9XZExYL1ZtemZ3WkhpclJkdndrYlJGd0N1RQotPiAneC1ncmVhc2UKaTljMk83V2tlN2hqMmkxenZNaWhENFZVbVpSdFp0Zkd2UmlNRkdyQzRUUQotLS0gUm5JWEl1RitTZ0V0QkRtMjlNbUZ0UlJMb3pYN0FBZWdwcGlXYTlGRmRFQQpkHpw9EdhyP931Bk2yleROk8Fa29zOVjePJY7g4+7P1Vzpfg==" }
